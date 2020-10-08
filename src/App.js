@@ -15,9 +15,51 @@ import ub from "./assets/imgs/ub.jpg"
 import limko from "./assets/imgs/limko.jpg"
 import Schools_1 from "./Components/Fragments/Schools_1"
 import Schools_2 from "./Components/Fragments/Schools_1"
+import Autocomplete from '@material-ui/lab/Autocomplete';
+
+const colleges = [
+   {school:'University Of Botswana'},
+   {school:'Botho University'},
+   {school:'Botswana International University of Science and Technology (BUIST)'},
+   {school:'Boitekanelo College'},
+   {school:'Gaborone College Of Law'}
+]
+
+const courses = [
+  {module:'Bachelor Of Science'},
+  {module:'Bachelor Of Computer Science'},
+  {module:'Bachelor Of Medicine'},
+  {module:'Bachelor Of Pharmacy'},
+  {module:'Bachelor Of Law'}
+]
+
 
 
 function App() {
+
+  const defaultProps = {
+    options: colleges,
+    getOptionLabel: (option) => option.school,
+  };
+
+  const defaultCourse = {
+    options: courses,
+    getOptionLabel: (option) => option.module,
+  };
+
+
+  const flatProps = {
+    options: colleges.map((option) => option.school),
+  };
+
+  const CourseProps ={
+    options: colleges.map((option) => option.module),
+  }
+
+  
+
+  const [value, setValue] = React.useState(null);
+
   return (
     <div className="App">
             
@@ -87,18 +129,30 @@ function App() {
         <div style={{marginRight:50}} class="col-lg-5 mt-5 mt-lg-0 mx-0">
           <div class="hero__img-container">
           <form  noValidate autoComplete="off">
-              <TextField id="standard-basic" label="College" /> {'   '}
-              <TextField id="standard-basic" label="Course" />
+        
+              <Autocomplete
+        {...defaultProps}
+        id="disable-close-on-select"
+        disableCloseOnSelect
+        renderInput={(params) => (
+          <TextField {...params} id="standard-basic" label="Institution" />
+        )}
+      />
+    <br></br>
+              <Autocomplete
+        {...defaultCourse}
+        id="disable-close-on-select"
+        disableCloseOnSelect
+        renderInput={(params) => (
+          <TextField {...params} id="standard-basic" label="Course" />
+        )}
+      />
               
            </form>
-      <br></br>   <br></br>   <br></br>
-           <div class="hero__btns-container">
+      <br></br>   <br></br>  
+           <div style={{padding:10}} class="hero__btns-container">
             <a style={{borderRadius:25 , backgroundColor:'#0a1f44' , textTransform:"capitalize" , fontWeight:500}} class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#">
-              <span>Get Free App</span>
-            </a>
-            
-            <a style={{borderRadius:25 , backgroundColor:"#e01705" , marginLeft:25,  textTransform:"capitalize",fontWeight:500}} class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#">
-              Get Free App
+              <span>Check Accreditation</span>
             </a>
          
           </div>
