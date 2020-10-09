@@ -163,128 +163,154 @@ function App() {
   </header>
 
 
-
-    <Schools_1/>
-
-    <Schools_2/>
-
-
-  <div id="product" class="block-5 space-between-blocks">
+  <div id="testimonials" class="block-20 space-between-blocks">
     <div class="container">
-
-      <div class="col-lg-8 col-xl-7 mx-auto text-center mb-5">
-        <p class="block__pre-title mb-2">WHY CHOOSING US</p>
-        <h1 class="block__title mb-3">Easy Process With <span class="highlight">Best Features</span></h1>
-        <p class="block__paragraph mb-0">
-
+      <div class="block__header col-lg-8 col-xl-7 mx-auto text-center px-0">
+        <h1 class="block__title mb-3">What Buyers Says About Us</h1>
+        <p class="block__paragraph">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s
           standard
         </p>
       </div>
-      <div class="row align-items-center flex-column-reverse flex-lg-row px-2">
-
+      <div class="row px-2 pt-4">
         <div class="col-lg-4">
-          <div class="card-2 d-flex flex-row flex-lg-row-reverse">
-            <div>
-              <span class="card-2__symbol mx-auto">
-                <i class="fas fa-heartbeat"></i>
-              </span>
-            </div>
-            <div class="px-2"></div>
-            <div>
-              <h3 class="card-2__title mb-2">Heart Rate Monitor</h3>
-              <p class="card-2__paragraph">
-                Lorem Ipsum is simply dummy text of
-                the printing and typesetting industry.
-              </p>
-            </div>
+          <div class="testimonial-card-1 mb-5">
+            <p class="testimonial-card-1__paragraph mb-3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry’s standard.
+            </p>
+            <div style={{padding:10 ,paddingLeft:23}} class="hero__btns-container">
+            <a style={{borderRadius:25 , backgroundColor:'#0a1f44' , textTransform:"capitalize" , fontWeight:500}} class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#">
+              <span>Will you get Accepted?</span>
+            </a>
           </div>
-          <div class="card-2 d-flex flex-row flex-lg-row-reverse">
-            <div>
-              <span class="card-2__symbol mx-auto">
-                <i class="fas fa-briefcase-medical"></i>
-              </span>
+            <div class="block-20__person">
+              <div class="mb-2">
+                <img class="block-20__person-avatar" src={ub}></img>
+              </div>
+              <div class="flex-grow-1 d-flex flex-column">
+                <span class="block-20__person-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="block-20__person-name my-1">University Of Botswana</span>
+               
+              </div>
             </div>
-            <div class="px-2"></div>
-            <div>
-              <h3 class="card-2__title mb-2">Blood Pressure Manager</h3>
-              <p class="card-2__paragraph">
-                Lorem Ipsum is simply dummy text of
-                the printing and typesetting industry.
-              </p>
-            </div>
-          </div>
-          <div class="card-2 d-flex flex-row flex-lg-row-reverse">
-            <div>
-              <span class="card-2__symbol mx-auto">
-                <i class="fas fa-bell"></i>
-              </span>
-            </div>
-            <div class="px-2"></div>
-            <div>
-              <h3 class="card-2__title mb-2">Alarm Alert</h3>
-              <p class="card-2__paragraph">
-                Lorem Ipsum is simply dummy text of
-                the printing and typesetting industry.
-              </p>
-            </div>
+            <span class="testimonial-card-1__quote-symbol">
+              <i class="fas fa-quote-left"></i>
+            </span>
           </div>
         </div>
-   
-        <div class="col-lg-4 my-5 text-center">
-          <img src="assets/imgs/img-2.png" class="w-75"></img>
-        </div>
-  
         <div class="col-lg-4">
-          <div class="card-2 d-flex">
-            <div>
-              <span class="card-2__symbol mx-auto">
-                <i class="fas fa-map-marker-alt"></i>
-              </span>
-            </div>
-            <div class="px-2"></div>
-            <div>
-              <h3 class="card-2__title mb-2">Location Finder</h3>
-              <p class="card-2__paragraph">
-                Lorem Ipsum is simply dummy text of
-                the printing and typesetting industry.
-              </p>
-            </div>
+          <div class="testimonial-card-1 mb-5">
+            <p class="testimonial-card-1__paragraph mb-3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry’s standard.
+            </p>
+            <div style={{padding:10 ,paddingLeft:23}} class="hero__btns-container">
+            <a style={{borderRadius:25 , backgroundColor:'#0a1f44' , textTransform:"capitalize" , fontWeight:500}} class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#">
+              <span>Will you get Accepted?</span>
+            </a>
           </div>
-          <div class="card-2 d-flex">
-            <div>
-              <span class="card-2__symbol mx-auto">
-                <i class="fas fa-fingerprint"></i>
-              </span>
+            <div class="block-20__person">
+              <div class="mb-2">
+                <img class="block-20__person-avatar" src={botho}></img>
+              </div>
+              <div class="flex-grow-1 d-flex flex-column">
+                <span class="block-20__person-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="block-20__person-name my-1">Botho University</span>
+      
+              </div>
             </div>
-            <div class="px-2"></div>
-            <div>
-              <h3 class="card-2__title mb-2">Fingerprint Lock</h3>
-              <p class="card-2__paragraph">
-                Lorem Ipsum is simply dummy text of
-                the printing and typesetting industry.
-              </p>
-            </div>
+            <span class="testimonial-card-1__quote-symbol">
+              <i class="fas fa-quote-left"></i>
+            </span>
           </div>
-          <div class="card-2 d-flex">
-            <div>
-              <span class="card-2__symbol mx-auto">
-                <i class="fas fa-mobile"></i>
-              </span>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-card-1 mb-5">
+            <p class="testimonial-card-1__paragraph mb-3">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry’s standard.
+            </p>
+            <div style={{padding:10 ,paddingLeft:23}} class="hero__btns-container">
+            <a style={{borderRadius:25 , backgroundColor:'#0a1f44' , textTransform:"capitalize" , fontWeight:500}} class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#">
+              <span>Will you get Accepted?</span>
+            </a>
+          </div>
+            <div class="block-20__person">
+              <div class="mb-2">
+                <img class="block-20__person-avatar" src={limko}></img>
+              </div>
+              <div class="flex-grow-1 d-flex flex-column">
+                <span class="block-20__person-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="block-20__person-name my-1">Limkokwing University</span>
+          
+              </div>
             </div>
-            <div class="px-2"></div>
-            <div>
-              <h3 class="card-2__title mb-2">Camera and Bluetooth</h3>
-              <p class="card-2__paragraph">
-                Lorem Ipsum is simply dummy text of
-                the printing and typesetting industry.
-              </p>
+            <span class="testimonial-card-1__quote-symbol">
+              <i class="fas fa-quote-left"></i>
+            </span>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-card-1 mb-5">
+            <p class="testimonial-card-1__paragraph mb-3">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry’s standard.
+            </p>
+            <div style={{padding:10 ,paddingLeft:23}} class="hero__btns-container">
+            <a style={{borderRadius:25 , backgroundColor:'#0a1f44' , textTransform:"capitalize" , fontWeight:500}} class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#">
+              <span>Will you get Accepted?</span>
+            </a>
+          </div>
+            <div class="block-20__person">
+              <div class="mb-2">
+                <img class="block-20__person-avatar" src={botho}></img>
+              </div>
+              <div class="flex-grow-1 d-flex flex-column">
+                <span class="block-20__person-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+                <span class="block-20__person-name my-1">Botho University</span>
+        
+              </div>
             </div>
+            <span class="testimonial-card-1__quote-symbol">
+              <i class="fas fa-quote-left"></i>
+            </span>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
+
+
+    <Schools_1/>
+
+    <Schools_2/>
 
 
 
@@ -369,108 +395,7 @@ function App() {
 
 
 
-  <div id="testimonials" class="block-20 space-between-blocks">
-    <div class="container">
-      <div class="block__header col-lg-8 col-xl-7 mx-auto text-center px-0">
-        <h1 class="block__title mb-3">What Buyers Says About Us</h1>
-        <p class="block__paragraph">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s
-          standard
-        </p>
-      </div>
-      <div class="row px-2 pt-4">
-        <div class="col-lg-4">
-          <div class="testimonial-card-1 mb-5">
-            <p class="testimonial-card-1__paragraph mb-3">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry’s standard
-
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen.
-            </p>
-            <div class="block-20__person">
-              <div class="mb-2">
-                <img class="block-20__person-avatar" src="assets/imgs/profile-2.png"></img>
-              </div>
-              <div class="flex-grow-1 d-flex flex-column">
-                <span class="block-20__person-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </span>
-                <span class="block-20__person-name my-1">Ali Boukeroui</span>
-                <span class="block-20__person-info">indiehackers.com</span>
-              </div>
-            </div>
-            <span class="testimonial-card-1__quote-symbol">
-              <i class="fas fa-quote-left"></i>
-            </span>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-card-1 mb-5">
-            <p class="testimonial-card-1__paragraph mb-3">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry’s standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen.
-            </p>
-            <div class="block-20__person">
-              <div class="mb-2">
-                <img class="block-20__person-avatar" src="assets/imgs/profile-2.png"></img>
-              </div>
-              <div class="flex-grow-1 d-flex flex-column">
-                <span class="block-20__person-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </span>
-                <span class="block-20__person-name my-1">Ali Boukeroui</span>
-                <span class="block-20__person-info">indiehackers.com</span>
-              </div>
-            </div>
-            <span class="testimonial-card-1__quote-symbol">
-              <i class="fas fa-quote-left"></i>
-            </span>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-card-1 mb-5">
-            <p class="testimonial-card-1__paragraph mb-3">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry’s standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen.
-            </p>
-            <div class="block-20__person">
-              <div class="mb-2">
-                <img class="block-20__person-avatar" src="assets/imgs/profile-2.png"></img>
-              </div>
-              <div class="flex-grow-1 d-flex flex-column">
-                <span class="block-20__person-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </span>
-                <span class="block-20__person-name my-1">Ali Boukeroui</span>
-                <span class="block-20__person-info">indiehackers.com</span>
-              </div>
-            </div>
-            <span class="testimonial-card-1__quote-symbol">
-              <i class="fas fa-quote-left"></i>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  
 
 
   <div id="pricing" class="block-17 px-4 space-between-blocks">
@@ -570,73 +495,6 @@ function App() {
 
 
 
-  <div id="faq" class="block-39 space-between-blocks">
-    <div class="container">
-
-      <div class="col-lg-8 col-xl-7 mx-auto text-center mb-5">
-        <h1 class="block__title">Frequently Asked Questions</h1>
-      </div>
-      <div class="row px-2">
-        <div class="col-lg-6">
-          <div class="content-block">
-            <h4 class="content-block__title">
-              What caused that horrible financial crisis in 2008?
-            </h4>
-            <p class="content-block__paragraph">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry’s standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen
-              book.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="content-block">
-            <h4 class="content-block__title">
-              Why does Southwest only fly 737’s?
-            </h4>
-            <p class="content-block__paragraph">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry’s standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen
-              book.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="content-block">
-            <h4 class="content-block__title">
-              How are interest rates adjusted?
-            </h4>
-            <p class="content-block__paragraph">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry’s standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen
-              book.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="content-block">
-            <h4 class="content-block__title">
-              What’s up with the IMF bailing out all of these countries?
-            </h4>
-            <p class="content-block__paragraph">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry’s standard
-              dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen
-              book.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
 
   <div id="contact-us" class="block-28 space-between-blocks border-top border-bottom">
@@ -688,23 +546,6 @@ function App() {
     </div>
   </div>
 
-
-
-  <div class="block-32 space-between-blocks">
-    <div class="container">
-     
-      <div class="col-lg-8 col-xl-7 mx-auto text-center mb-5">
-        <h1 class="block__title mb-3">Buy Now And Save 50%</h1>
-        <p class="block__paragraph mb-0">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s
-          standard
-        </p>
-      </div>
-      <div class="text-center">
-        <a href="#" class="btn btn-primary">Buy Now</a>
-      </div>
-    </div>
-  </div>
 
 
 

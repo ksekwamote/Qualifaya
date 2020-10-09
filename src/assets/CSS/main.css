@@ -750,7 +750,7 @@
     padding-top: 10rem;
     margin-top: 58px;
     margin-bottom: 25px;
-    background: white;
+    background: linear-gradient(-45deg,#fe0847,#feae3f);
     border: 1px solid #dee2e6;
     border-radius: 5px;
     position: relative;
@@ -769,7 +769,7 @@
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: var(--primary);
+    background: linear-gradient(-45deg,#fe0847,#feae3f);
     color: var(--primary-invert);
     font-size: 1.3rem;
     border: 2px solid white;
@@ -792,10 +792,10 @@
   
   .block-20__person-avatar {
     padding: 6px;
-    width: 116px;
-    height: 116px;
+    width: 150px;
+    height: 150px;
     background: white;
-    border-radius: 10rem;
+    border-radius: 12rem;
     border: solid 2px #eff0f9;
   }
   
@@ -805,8 +805,9 @@
   }
   
   .block-20__person-name {
-    font-size: .87rem;
+    font-size: 1.2rem;
     font-weight: 600;
+    color: ivory;
   }
   
   .block-20__person-info {
