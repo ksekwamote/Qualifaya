@@ -22,34 +22,34 @@ const colleges = [
 
  export const credits = [
      {
-         school:"Botho University",
-         module: "Bachelor Of Science"
+         school:'Botho University',
+         module: 'Bachelor Of Science'
      },
      {
-         school: "Botho University",
-         module: "Bachelor Of Computer Science"
+         school: 'Botho University',
+         module: 'Bachelor Of Computer Science'
      },
      {
-         school: "Univerity Of Botswana",
-         module: "Bachelor Of Science"
+         school: 'University Of Botswana',
+         module: 'Bachelor Of Science'
      },
      {
-         school: "Univerity Of Botswana",
-         module: "Bachelor Of Computer Science"
+         school: 'University Of Botswana',
+         module: 'Bachelor Of Computer Science'
      }
      ,
      {
-         school: "Univerity Of Botswana",
-         module: "Bachelor Of Law"
+         school: 'University Of Botswana',
+         module: 'Bachelor Of Law'
      },
      ,
      {
-         school: "Univerity Of Botswana",
-         module: "Bachelor Of Medicine"
+         school: 'University Of Botswana',
+         module: 'Bachelor Of Medicine'
      },
      {
-         school: "Boitekanelo College",
-         module: "Bachelor Of Pharmacy"
+         school: 'Boitekanelo College',
+         module: 'Bachelor Of Pharmacy'
      }
  ]
  
@@ -99,7 +99,28 @@ export default function Acceptance() {
       const [mod, setmod] = useState("")
       const [state, setstate] = useState("")
  
-      
+       function setModule(event, value){
+
+        if (value!= null){
+           setmod(value.module)
+        }
+        else{
+          setmod("")
+        }
+
+      }
+
+      function setInstitution(event, value){
+
+        if (value!= null){
+          setInst(value.school)
+       }
+       else{
+         setInst("")
+       }
+
+
+      }
     
      
 
@@ -112,13 +133,13 @@ export default function Acceptance() {
       <div class="row px-0 mx-0 align-items-center">
         <div class="col-lg-6 px-0">
 
-        <div class="hero__img-container">
+        <div style={{paddingRight:150}} class="hero__img-container">
           <form  noValidate autoComplete="off">
         
               <Autocomplete
         {...defaultProps}
         id="disable-close-on-select"
-        onSelect={e => setInst(e.target.value)}
+        onChange={ setInstitution}
         renderInput={(params) => (
           <TextField {...params}  id="standard-basic" label="Institution" />
         )}
@@ -127,7 +148,7 @@ export default function Acceptance() {
               <Autocomplete
         {...defaultCourse}
         id="disable-close-on-select"
-        onSelect={e => setmod(e.target.value)}
+        onChange={setModule}
         renderInput={(params) => (
           <TextField {...params}   id="standard-basic" label="Course" />
         )}
@@ -136,7 +157,7 @@ export default function Acceptance() {
            </form>
       <br></br>   <br></br>  
            <div style={{padding:10}} class="hero__btns-container">
-            <a style={{borderRadius:25 , backgroundColor:'#0a1f44' , textTransform:"capitalize" , fontWeight:500}} onClick={e => console.log((checkCredit(inst,mod)))}  class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#">
+            <a style={{borderRadius:25 , backgroundColor:'#0a1f44' , textTransform:"capitalize" , fontWeight:500}} onClick={e => setstate((checkCredit(inst,mod)))}  class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#">
               <span>Check Accreditation</span>
             </a>
          
@@ -145,10 +166,12 @@ export default function Acceptance() {
           
           
         </div>
-        <div style={{marginLeft:500 , padding:50, backgroundColor:"aliceblue" , height:300, width:300}} class="col-lg-5 mt-5 mt-lg-0 mx-0">
+        <div style={{paddingLeft:50}}>
+        <div style={{ padding:50, backgroundColor:"aliceblue" , height:300, width:500}} >
             <br></br> 
         <h2>{state}</h2>
           
+        </div>
         </div>
       </div>
     </div>
