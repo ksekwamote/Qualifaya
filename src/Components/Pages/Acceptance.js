@@ -3,22 +3,13 @@ import {Header, Footer} from "./Home"
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { blue } from '@material-ui/core/colors';
+import { qList } from '../../assets/JSON/bqalist'
 
-const colleges = [
-    {school:'University Of Botswana'},
-    {school:'Botho University'},
-    {school:'Botswana International University of Science and Technology (BUIST)'},
-    {school:'Boitekanelo College'},
-    {school:'Gaborone College Of Law'}
- ]
+const colleges = qList.Sheet.map(item => item.Provider)
+
+
  
- const courses = [
-   {module:'Bachelor Of Science'},
-   {module:'Bachelor Of Computer Science'},
-   {module:'Bachelor Of Medicine'},
-   {module:'Bachelor Of Pharmacy'},
-   {module:'Bachelor Of Law'}
- ]
+ const courses = qList.Sheet.map(item => item.Programme)
 
  export const credits = [
      {
@@ -79,20 +70,28 @@ export default function Acceptance() {
 
       function checkCredit(school , module){
 
+        const accreditation = qList.Sheet 
+
         if(school==""  || module==""){
             return "Fields cannot be blank"
         }
     
-        for (let item in credits){
-            if (credits[item].school== school && credits[item].module==module ){
-    
-                return `Excellent ,${module} is properly credited by ${school} &#128519;`
+        for (let item in accreditation){
+            if (accreditation[item].Provider== school && accreditation[item].Programme==module ){
+                if(accreditation[item].Accreditation!="Approved"){
+                        return <h2> Excellent ,{module} has <strong>{accreditation[item].Accreditation}</strong> in {school} from BQA</h2>
+              }
+              else{
+                return <h2> Excellent ,{module} has been <strong>{accreditation[item].Accreditation}</strong> in {school} by BQA</h2>
+              }
             }
         }
     
-        return `Unfortunately, ${module} is yet to be properly credited by ${school} &#128546;` 
+        return <div>Unfortunately, {module} is yet to be properly accredited by {school} &#128546;</div> 
     
      }
+
+
     
       const [value, setValue] = React.useState(null);
       const [inst, setInst] = useState("")
@@ -100,9 +99,9 @@ export default function Acceptance() {
       const [state, setstate] = useState("")
  
        function setModule(event, value){
-
+        
         if (value!= null){
-           setmod(value.module)
+           setmod(value)
         }
         else{
           setmod("")
@@ -111,9 +110,9 @@ export default function Acceptance() {
       }
 
       function setInstitution(event, value){
-
+        console.log(value)
         if (value!= null){
-          setInst(value.school)
+          setInst(value)
        }
        else{
          setInst("")
@@ -126,6 +125,7 @@ export default function Acceptance() {
 
     return (
         <div>
+          
             <header class="hero container-fluid border-bottom">
             <Header/>
 
@@ -137,9 +137,12 @@ export default function Acceptance() {
           <form  noValidate autoComplete="off">
         
               <Autocomplete
-        {...defaultProps}
+       
         id="disable-close-on-select"
+        options={[...new Set(colleges)]}
+        getOptionLabel={(option) => option}
         onChange={ setInstitution}
+          
         renderInput={(params) => (
           <TextField {...params}  id="standard-basic" label="Institution" />
         )}
@@ -148,6 +151,8 @@ export default function Acceptance() {
               <Autocomplete
         {...defaultCourse}
         id="disable-close-on-select"
+        options={[...new Set(courses)]}
+        getOptionLabel={option=> option}
         onChange={setModule}
         renderInput={(params) => (
           <TextField {...params}   id="standard-basic" label="Course" />

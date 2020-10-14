@@ -430,6 +430,8 @@ function Home() {
 
 
             <contactUs/>
+
+            
             <Footer/>
 
  
